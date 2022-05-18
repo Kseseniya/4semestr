@@ -6,6 +6,9 @@ CXXFLAGS +=-Wall -Wextra -g -std=c++17
 $(PROG): $(OBJ)
 	$(CXX) -o $(PROG) $(OBJ) $(LIBS)
 
+clean:
+	-rm *.o
+
 depend:
 	$(CXX) -MM $(OBJ:.o=.cc) > .depend
 -include .depend
